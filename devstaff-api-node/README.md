@@ -6,7 +6,7 @@ A simple RESTful API used to view / create / edit / delete tasks.
 
 ```bash
 npm install
-node github-analytics.js
+node index.js
 ```
 
 ## Usage
