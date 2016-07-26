@@ -1,7 +1,9 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var moment = require('moment');
-var _ = require('lodash');
+import express from 'express';
+import bodyParser from 'body-parser';
+import moment from 'moment';
+import _ from 'lodash';
+import path from 'path';
+
 var app = express();
 
 var dbCollection = [
@@ -12,9 +14,10 @@ var dbCollection = [
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use('/public', express.static('public'));
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 
 app.get('/tasks', function (req, res, next) {
