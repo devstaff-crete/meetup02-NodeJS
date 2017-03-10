@@ -27,7 +27,7 @@ Here you can check some basic javascript examples in order to get more familiar 
 var hello = 'Hello world'
 var myInt = 12
 var myArray = ['lemon', 'orange', 'apple']
-var myObj = {name: Nikos, age: 33 }
+var myObj = {name: 'Nikos', age: 33 }
 ```
 
 ### Functions
